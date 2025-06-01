@@ -1,0 +1,12 @@
+README.md
+setup.py
+med_equipment_scraper_suite.egg-info/PKG-INFO
+med_equipment_scraper_suite.egg-info/SOURCES.txt
+med_equipment_scraper_suite.egg-info/dependency_links.txt
+med_equipment_scraper_suite.egg-info/requires.txt
+med_equipment_scraper_suite.egg-info/top_level.txt
+scrapers/__init__.py
+scrapers/alibaba.py
+scrapers/base_scraper.py
+scrapers/medicalexpo.py
+scrapers/medline.py

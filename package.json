@@ -1,0 +1,19 @@
+{
+  "name": "med-equipment-scraper-suite",
+  "version": "1.0.0",
+  "description": "A comprehensive web scraping solution for medical equipment data",
+  "main": "index.js",
+  "scripts": {
+    "test": "pytest",
+    "start": "python -m scrapers",
+    "export": "python export.py"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  },
+  "author": "",
+  "license": "MIT"
+} 
