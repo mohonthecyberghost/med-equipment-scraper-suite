@@ -131,7 +131,7 @@ class MedicalExpoScraper(BaseScraper):
                             'source': 'medicalexpo',
                             'source_id': source_id,
                             'name': None,
-                            'brand': None,
+                            'manufacturer': None,
                             'category': category,
                             'description': None,
                             'specifications': {},
@@ -146,14 +146,14 @@ class MedicalExpoScraper(BaseScraper):
                             if name_element:
                                 product_data['name'] = await name_element.text_content()
                             
-                            # Extract brand (manufacturer)
+                            # Extract manufacturer
                             try:
                                 # Wait for manufacturer element to be available
                                 await self.page.wait_for_selector('.supplierDetails__Name-sc-1u0qos1-6', timeout=5000)
                                 manufacturer_element = await self.page.query_selector('.supplierDetails__Name-sc-1u0qos1-6')
                                 if manufacturer_element:
-                                    product_data['brand'] = await manufacturer_element.text_content()
-                                    logger.info(f"Found manufacturer: {product_data['brand']}")
+                                    product_data['manufacturer'] = await manufacturer_element.text_content()
+                                    logger.info(f"Found manufacturer: {product_data['manufacturer']}")
                                 else:
                                     logger.warning("Manufacturer element not found")
                             except Exception as e:
