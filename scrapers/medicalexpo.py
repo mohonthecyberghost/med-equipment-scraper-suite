@@ -20,7 +20,7 @@ class MedicalExpoScraper(BaseScraper):
             max_pages: Maximum number of pages to scrape
         """
         try:
-            logger.info("Initializing browser...")
+            logger.info("Initializing browser....")
             await self.init_browser()
             
             # Navigate to category page
@@ -116,6 +116,7 @@ class MedicalExpoScraper(BaseScraper):
                     
                 logger.info("Moving to the next page...")
                 await next_button.click()
+                
                 await self.page.wait_for_load_state('networkidle')
                 current_page += 1
                 
