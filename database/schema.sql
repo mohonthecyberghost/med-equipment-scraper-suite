@@ -12,6 +12,8 @@ CREATE TABLE IF NOT EXISTS products (
     category VARCHAR(100),
     description TEXT,
     specifications JSON,
+    url VARCHAR(512),
+    video_url VARCHAR(512),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     UNIQUE KEY unique_product (source, source_id)
